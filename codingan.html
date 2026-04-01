@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKN Ende Islamic Boarding School | Website Profil Sekolah</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+     
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        
+        .navbar {
+            background: rgba(255,255,255,.95)!important;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0,0,0,.1);
+            padding: 1rem 0;
+            transition: all .3s ease;
+        }
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: #217925 !important;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #14772c !important;
+            margin: 0 15px;
+            position: relative;
+            transition: all .3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #3b82f6 !important;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(45deg, #34941c, #8b5cf6);
+        }
+
+        .hero {
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), 
+    url('d:\New folder\js\INTEGRITAS-3-1200x600.png') center/cover;
+}
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            animation: slideInUp 1s ease;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            animation: slideInUp 1s ease .2s both;
+        }
+        .btn-hero {
+            background: linear-gradient(45deg, #3eac28, #3a8f20);
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all .4s;
+            animation: slideInUp 1s ease .4s both;
+        }
+        .btn-hero:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(59,130,246,.4);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #247519; 
+            position: relative;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            border-radius: 3px;
+        }
+
+        .about-img {
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0,0,0,.15);
+            transition: transform .4s;
+        }
+        .about-img:hover {
+            transform: scale(1.02);
+        }
+
+        .program-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,.1);
+            transition: all .4s ease;
+            height: 100%;
+        }
+        .program-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0,0,0,.2);
+        }
+        .card-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: white;
+            transition: transform .3s;
+        }
+        .program-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.1);
+            transition: all .3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2e7a1b 0%, #13681e 100%);
+        }
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            transition: all .3s;
+            margin: 0 8px;
+        }
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .section-title h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-mosque me-2"></i>Madrasah Aliyah Kejuran Negeri Ende
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero d-flex align-items-center text-center text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1>Madrasah Aliyah Kejuran Negeri Ende</h1>
+                    <p class="lead mb-5 mx-auto" style="max-width: 600px;">
+                        Sekolah Menengah Kejuruan Islam Terbaik dengan <strong>Kurikulum Merdeka</strong><br>
+                        Mencetak Generasi Qur'ani yang Berprestasi dan Siap Kerja
+                    </p>
+                    <bac src="img/INTEGRITAS-2-1200x600.png">
+                    <a href="#kontak" class="btn btn-hero btn-lg">
+                        <i class="fas fa-rocket me-2"></i>Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang <span>Kami</span></h2>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="d:\New folder\js\INTEGRITAS-2-1200x600.png" 
+                         alt="Gedung Sekolah" class="about-img img-fluid w-100">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4 fs-2 text-primary">Madrasah Aliyah Kejuran Negeri Ende</h3>
+                    <p class="lead mb-4">Didirikan tahun 2019, MAKN Ende telah mencetak <strong>95%</strong> lulusan sukses di berbagai industri. Dengan <strong>Kurikulum Merdeka</strong> dan pengajaran berbasis Al-Qur'an, kami siap membentuk generasi muda berkualitas.</p>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center p-3 bg-light rounded-4">
+                                <i class="fas fa-award text-warning fs-2 me-3"></i>
+                                <div>
+                                    <h4 class="fw-bold mb-1">7+</h4>
+                                    <small class="text-muted">Tahun Pengalaman</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center p-3 bg-light rounded-4">
+                                <i class="fas fa-users text-success fs-2 me-3"></i>
+                                <div>
+                                    <h4 class="fw-bold mb-1">300+</h4>
+                                    <small class="text-muted">Siswa Aktif</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i class="fas fa-book-open me-2"></i>Baca Profil Lengkap
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-5 bg-gradient" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Program <span>Kejuruan</span></h2>
+            </div>
+            <div class="row g-4">
+                
+                <div class="col-lg-6">
+                    <div class="program-card card h-100 text-center">
+                        <div class="card-body p-5">
+                            <div class="card-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3 fs-3">PPLG</h4>
+                            <h5 class="text-primary mb-4">Pengembangan Perangkat Lunak Dan Gim</h5>
+                            <p class="lead mb-4">Pemrograman web & mobile app, AI, database MySQL, dan software engineering. <strong>Sertifikasi BNSP + Google Developer</strong></p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i>HTML, CSS, JavaScript, React</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Python, Node.js, PHP</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Android & iOS Development</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary px-5 py-2">
+                                <i class="fas fa-arrow-right me-2"></i>Detail PPLG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="program-card card h-100 text-center">
+                        <div class="card-body p-5">
+                            <div class="card-icon" style="background: linear-gradient(45deg, #10b981, #059669);">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3 fs-3">DKV</h4>
+                            <h5 class="text-success mb-4">Desain Komunikasi Visual</h5>
+                            <p class="lead mb-4">Graphic Designer (Desainer Grafis)Illustrator (Ilustrator)UI/UX Designer (Desainer Antarmuka Pengguna)Animator & Motion DesignerArt Director (Direktur Seni)Creative Entrepreneur (Wirausaha Kreatif)  <strong>Sertifikasi Cisco CCNA + CompTIA</strong></p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i>Visual</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Photograf</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cybersecurity Essentials</li>
+                            </ul>
+                            <a href="#" class="btn btn-success px-5 py-2">
+                                <i class="fas fa-arrow-right me-2"></i>Detail DKV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hubungi <span>Kami</span></h2>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <div class="contact-card p-5">
+                        <div class="row g-4">
+                            <div class="col-md-12">
+                                <div class="text-center p-4 bg-primary bg-opacity-10 rounded-4 mb-4">
+                                    <i class="fas fa-phone fs-1 text-primary mb-3"></i>
+                                    <h4 class="fw-bold">Pendaftaran Dibuka!</h4>
+                                    <p class="lead mb-0">Hubungi sekarang untuk info lengkap</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center p-4 bg-light rounded-4 h-100">
+                                    <i class="fas fa-map-marker-alt text-danger fs-2 me-4"></i>
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Alamat Lengkap</h5>
+                                        <p class="mb-0">Jl.Ende-Bajawa No. 45<br>AnaRaja-Nangapanda,NTT,Ende 70711</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center p-4 bg-light rounded-4 h-100">
+                                    <i class="fas fa-phone text-success fs-2 me-4"></i>
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Telepon</h5>
+                                        <p class="mb-0 fs-5 fw-bold">(0511) 477333</p>
+                                        <p class="mb-0">0812-3856-7490</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.988518557614!2d114.83851861476895!3d-3.428812995511864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMjUnNDQuNyJTIDExNMKwNTAnMTguMiJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                            class="w-100 rounded-4 shadow-lg" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h4 class="fw-bold mb-3 text-white">
+                        <i class="fas fa-school me-2"></i>MAKN Ende Menuju Prestasi Dan Menerbitkan Dunia Digital
+                    </h
